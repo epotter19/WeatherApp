@@ -1,3 +1,5 @@
+# This application utilizes openweather API to display the weather in different cities and states
+
 import sys
 import requests
 from PyQt5.QtWidgets import (QApplication, QWidget, QLabel,
@@ -76,7 +78,7 @@ class WeatherApp(QWidget):
 
     def get_weather(self):
 
-        api_key = "87d4e321f47d6d126530004b6c255733"
+        api_key = "Input your API key from https://openweathermap.org"
         city = self.city_input.text()
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
         try:
